@@ -1,0 +1,142 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Aug  1 15:24:26 2020
+| Host         : DESKTOP-UM4PI0U running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Camera_Demo_control_sets_placed.rpt
+| Design       : Camera_Demo
+| Device       : xc7s15
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    66 |
+| Unused register locations in slices containing registers |   224 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            8 |
+|      2 |            5 |
+|      3 |            1 |
+|      4 |           10 |
+|      5 |            4 |
+|      7 |            1 |
+|      8 |            5 |
+|     10 |            8 |
+|     11 |            4 |
+|     12 |            1 |
+|     13 |            2 |
+|     14 |            1 |
+|    16+ |           16 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             263 |           85 |
+| No           | No                    | Yes                    |             145 |           47 |
+| No           | Yes                   | No                     |              85 |           23 |
+| Yes          | No                    | No                     |             180 |           59 |
+| Yes          | No                    | Yes                    |              92 |           37 |
+| Yes          | Yes                   | No                     |              83 |           21 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+|                      Clock Signal                      |                                 Enable Signal                                |                                    Set/Reset Signal                                    | Slice Load Count | Bel Load Count |
++--------------------------------------------------------+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+|  u_vip/u_digital_recognition/col_area_reg[2]_i_1_n_0   |                                                                              |                                                                                        |                1 |              1 |
+|  u_vip/u_digital_recognition/col_area_reg[0]_i_2_n_0   |                                                                              |                                                                                        |                1 |              1 |
+|  u_vip/u_digital_recognition/col_area_reg[3]_i_1_n_0   |                                                                              |                                                                                        |                1 |              1 |
+|  u_vip/u_digital_recognition/col_area_reg[1]_i_1_n_0   |                                                                              |                                                                                        |                1 |              1 |
+|  u_vip/u_digital_recognition/row_area_reg[0]_i_2_n_0   |                                                                              |                                                                                        |                1 |              1 |
+|  clk_10/inst/clk_out1                                  | MIPI_Camera_IIC/iic_sda_o_i_1_n_0                                            | u_vip/u_projection/i_rst                                                               |                1 |              1 |
+|  clk_10/inst/clk_out1                                  |                                                                              | u_vip/u_projection/i_rst                                                               |                1 |              1 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/pclk |                                                                              |                                                                                        |                1 |              1 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_v_myram/mem_reg_0_15_0_0_i_1_n_0                        |                                                                                        |                1 |              2 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/mem_reg_0_63_0_0_i_1_n_0                        |                                                                                        |                1 |              2 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/LockLostReset/aRst_int_0                |                1 |              2 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/mem_reg_0_31_0_0_i_1_n_0                        |                                                                                        |                1 |              2 |
+|  u_vip/u_projection/nxt_state_reg[2]_i_2_n_0           |                                                                              |                                                                                        |                1 |              3 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_v_myram/mem_reg_0_127_0_0_i_1__0_n_0                    |                                                                                        |                1 |              4 |
+|  i_clk_IBUF                                            | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/E[0]                                  | u_vip/u_projection/SR[0]                                                               |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_v_myram/v_do_d0_reg_0[0]                                | u_vip/u_projection/i_rst                                                               |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_digital_recognition/col_cnt0                                         | u_vip/u_projection/project_done_flag_reg_3[0]                                          |                1 |              4 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/mem_reg_256_383_0_0_i_1_n_0                     |                                                                                        |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/h_do_d0_reg_0[0]                                | u_vip/u_projection/i_rst                                                               |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/mem_reg_0_127_0_0_i_1_n_0                       |                                                                                        |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/mem_reg_128_255_0_0_i_1_n_0                     |                                                                                        |                1 |              4 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_v_myram/mem_reg_128_255_0_0_i_1__0_n_0                  |                                                                                        |                1 |              4 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/sum_dly                     |                                                                                        |                2 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/start_dly_1                 |                                                                                        |                2 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/curr_delay                  |                                                                                        |                2 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/end_dly_0                   |                                                                                        |                1 |              5 |
+|  clk_10/inst/clk_out1                                  | MIPI_Camera_Driver/initial_cnt[6]_i_1_n_0                                    | u_vip/u_projection/i_rst_0                                                             |                2 |              7 |
+|  u_vip/u_projection/num_col0                           |                                                                              |                                                                                        |                2 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/to_cnt[1]_1                 | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/p_5_out[1]                            |                2 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/packet_size[15]                 |                                                                                        |                2 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/to_cnt[0]_2                 | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/p_5_out[0]                            |                2 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/data_shift[1]_0             |                                                                                        |                5 |              8 |
+|  i_clk_IBUF                                            | u_vip/u_digital_recognition/col_border_l[9]_i_1_n_0                          |                                                                                        |                3 |             10 |
+|  i_clk_IBUF                                            | u_vip/u_digital_recognition/ADDRA[0]                                         |                                                                                        |                5 |             10 |
+|  i_clk_IBUF                                            | u_vip/u_digital_recognition/row_border_low[9]_i_1_n_0                        |                                                                                        |                3 |             10 |
+|  i_clk_IBUF                                            | u_vip/u_digital_recognition/row_border_addr_reg[0]_0[0]                      |                                                                                        |                2 |             10 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/vdata                                   | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/vdata[9]_i_1_n_0                                  |                3 |             10 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_h_myram/E[0]                                            |                                                                                        |                3 |             10 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_0              |                3 |             10 |
+|  i_clk_IBUF                                            | u_vip/u_projection/u_v_myram/E[0]                                            |                                                                                        |                3 |             10 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/flg_rise_frame                                    |                3 |             11 |
+|  i_clk_IBUF                                            | u_vip/u_projection/v_raddr[10]_i_1_n_0                                       | u_vip/u_projection/i_rst                                                               |                5 |             11 |
+|  i_clk_IBUF                                            | u_vip/u_projection/h_raddr[10]_i_1_n_0                                       | u_vip/u_projection/i_rst                                                               |                4 |             11 |
+|  i_clk_IBUF                                            | u_vip/u_projection/cnt[10]_i_1_n_0                                           | u_vip/u_projection/i_rst                                                               |                4 |             11 |
+|  i_clk_IBUF                                            |                                                                              | u_vip/u_projection/SS[0]                                                               |                2 |             12 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/wait_cnt                    | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.wait_cnt[12]_i_1_n_0          |                3 |             13 |
+|  clk_10/inst/clk_out2                                  |                                                                              |                                                                                        |                8 |             13 |
+|  i_clk_IBUF                                            |                                                                              |                                                                                        |                5 |             14 |
+|  i_clk_IBUF                                            | u_vip/u_projection/col_border_ram_we_reg_n_0                                 |                                                                                        |                2 |             16 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/packet_size[7]                  |                                                                                        |                6 |             16 |
+|  i_clk_IBUF                                            | u_vip/u_projection/we                                                        |                                                                                        |                2 |             16 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/transfer_cnt[15]_i_2_n_0        | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/transfer_cnt[15]_i_1_n_0                  |                4 |             16 |
+| ~MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  |                                                                              |                                                                                        |                4 |             17 |
+|  i_clk_IBUF                                            |                                                                              | u_vip/u_projection/i_rst                                                               |                5 |             18 |
+|  i_clk_IBUF                                            | u_vip/u_projection/h_di_i_1_n_0                                              | u_vip/u_projection/i_rst                                                               |               11 |             20 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0 |                                                                                        |                6 |             20 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_val[0]_i_1_n_0  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0           |                5 |             20 |
+|  clk_10/inst/clk_out2                                  |                                                                              | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0           |                6 |             20 |
+|  clk_10/inst/clk_out1                                  | MIPI_Camera_Driver/flg_data_ok                                               | u_vip/u_projection/i_rst_0                                                             |                8 |             23 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/DataEncoders[0].DataEncoder/SR[0]                                  |                9 |             32 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_Read/U0/dl0_rxvalidhs                                 |                                                                                        |               14 |             48 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  |                                                                              |                                                                                        |               31 |            101 |
+|  clk_10/inst/clk_out1                                  |                                                                              | u_vip/u_projection/i_rst_0                                                             |               38 |            118 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              |                                                                                        |               28 |            127 |
++--------------------------------------------------------+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+
+
